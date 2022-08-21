@@ -12,7 +12,12 @@
 
     <script>
         const option = {
-            template: `<h1>Hello Vue3</h1>`
+            template: `<h1>Hello Vue3</h1><div>{{count}}</div><button @click=count++>add</button>`,
+            data() {
+                return {
+                    count: 0
+                }
+            }
         };
         const app = Vue.createApp(option);
         app.mount('#app');
