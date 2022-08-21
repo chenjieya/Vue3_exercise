@@ -17,10 +17,16 @@
         <button @click=count++>add</button>
     </script>
 
+    <template id="why">
+        <h1>Hello Vue3</h1>
+        <div>{{count}}</div>
+        <button @click=count++>add</button>
+    </template>
+
 
     <script>
         const option = {
-            template: `#cj`,
+            template: `#why`,
             data() {
                 return {
                     count: 0
