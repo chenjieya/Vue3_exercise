@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div id="app"></div>
     <script src="https://unpkg.com/vue@3"></script>
     <template id="why">
-        <div v-cloak>{{ message }}</div>
+        <div :[name]="value" v-bind="styleobj">1231</div>
     </template>
     <script>
         const option = {
             template: `#why`,
             data() {
                 return {
-                    message: 'abc'
+                    name: 'lor',
+                    value: 'tesyt',
+                    styleobj: {
+                        name: 'chenjie',
+                        age: '18',
+                        height: '185'
+                    }
                 }
             },
             methods: {
