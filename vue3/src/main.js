@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './02_provide和inject/App.vue';
+import App from './04_组件v-model/App.vue';
 
 
 
