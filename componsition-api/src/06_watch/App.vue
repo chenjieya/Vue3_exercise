@@ -14,7 +14,21 @@ export default {
         const info = reactive({name:'cj', age: 18});
 
         // watch监听reactive响应式
-        watch(()=>info.name, (newVal, oldVal) => {
+        // watch(()=>info.name, (newVal, oldVal) => {
+        //     console.log(newVal, oldVal);
+        // }, {
+        //     immediate: false
+        // })
+
+        // watch监听reactive响应式对象
+        watch(info, (newVal, oldVal) => {
+            console.log(newVal, oldVal);
+            console.log(newVal.name);
+        }, {
+            immediate: false
+        })
+
+        watch(() => ({...info}), (newVal, oldVal) => {
             console.log(newVal, oldVal);
         }, {
             immediate: false
